@@ -33,6 +33,12 @@ a:hover{
 	border-style: dashed; 
 }
 
+.current {
+	font-weight: bold;
+	border-left: 5px solid  #ABC2E4;
+	padding-left: 3px;
+}
+
 /*Style the images*/
 img{
     height: 200px;
@@ -56,7 +62,7 @@ h2{
 
 h3{
 	font-size: 50px;
-	color: darkgrey;
+	color: white;
 	font-weight: bold;
 	text-align: center;
 }
@@ -216,23 +222,46 @@ p, h1, h2 {
 	}
   }
 
+
+  a.skip{
+	background: white;
+	left: 0;
+	padding: 6px;
+	position: absolute;
+	top: -40px;
+	-webkit-transition: top 1s ease-out;
+	transition: top 1s ease-out;
+	z-index: 1;
+  }
+  
+  a.skip:focus{
+	top:20px;
+	color: black;
+	text-decoration-style: solid;
+  }
+
+
+.big{
+	font-size: 50px;
+	text-decoration: underline;
+	  }
   .bubble {
 	  text-align: center;
   }
   .about {
 	  text-align: center;
   }
-  /* Projects.HTML */
+  /* travelposts.HTML */
   .season {
 	  text-align: center;
-	  color: grey;
+	  color:white;
   }
 
   .client {
 	  text-align: center;
   }
 
-  .methodolog {
+  .methodolog, .rome {
 	  text-align: center;
   }
 
@@ -240,7 +269,68 @@ p, h1, h2 {
 	  margin-right: auto;
 	  border: none;
   }
-
+  * {
+	box-sizing: border-box;
+  }
+  
+  form {
+	background: #f9f9f9;
+	border: 1px solid #c1c1c1;
+	margin-top: 2rem;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1em;
+  }
+  form input {
+	margin-bottom: 1rem;
+	background: #fff;
+	border: 1px solid #9c9c9c;
+  }
+  form button {
+	background: lightgrey;
+	padding: 0.7em;
+	border: 0;
+  }
+  form button:hover {
+	background: gold;
+  }
+  
+  label {
+	text-align: right;
+	display: block;
+	padding: 0.5em 1.5em 0.5em 0;
+  }
+  
+  input {
+	width: 100%;
+	padding: 0.7em;
+	margin-bottom: 0.5rem;
+  }
+  input:focus {
+	outline: 3px solid gold;
+  }
+  
+  @media (min-width: 400px) {
+	form {
+	  overflow: hidden;
+	}
+  
+	label {
+	  float: left;
+	  width: 200px;
+	}
+  
+	input {
+	  float: left;
+	  width: calc(100% - 200px);
+	}
+  
+	button {
+	  float: right;
+	  width: calc(100% - 200px);
+	}
+  }
 
 
     /* pics.HTML */
@@ -251,17 +341,42 @@ p, h1, h2 {
 	  height:auto;
 	  width: auto;
   }
+  .row {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 4px;
+  }
+    /* projects.HTML */
+  .grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 1rem;
+  }
+  .grid > div {
+	background: #EDE7F6;
+	padding: 10px;
+	border-radius: 1rem;
+  }
 /*Added this so the links stay the same color*/
 a:visited{color:#5E5B5B}
+
+footer {
+	text-align: center;
+}
 
 @media screen and (min-width: 880px){
 	.nav_links {
 		flex-direction: row;
 		justify-content: space-evenly;
 	}
+	.grid {
+		grid-template-columns: 1fr 1fr;
+	}
+	.rome {
+		grid-column: 1 / span 2;
+
+	}
 }
 
-footer {
-	text-align: center;
-}
+
 
