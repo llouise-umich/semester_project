@@ -63,27 +63,24 @@
 		</div>
 
 
-		<form class="form1" action="">
-			<label for="firstName" class="first-name">First Name</label>
-			<input id="firstName" type="text">
-
-			<label for="lastName" class="last-name">Last Name</label>
-			<input id="lastName" type="text">
-
-			<label for="job">Job</label>
-			<input id="job" type="text">
-
-			<label for="age">Age</label>
-			<input id="age" type="text">
-
-			<label for="email">Email</label>
-			<input id="email" type="email">
-
-			<button>Submit</button>
-		</form>
-		<form class="wpcf7-form sent">
-			<div class="wpcf7-response-output wpcf7-display-none wpcf7-mail-sent-ok" style="display: block;" role="alert">Thank you for your message. It has been sent.
+		<form action="https://formspree.io/f/xbjqlzjo" method="POST">
+			<fieldset>
+			  <legend>Contact Form</legend>
+		  
+			<div class="container_form">
+			  <label for ="fullname"> Your Name </label>
+			  <input type="text" name = "name" id = "fullname" placeholder="Enter Your Name"><br>
+		  
+			  <label for ="email"> Your Email </label>
+			  <input type = "email" value = "llouise@umich.edu" name = "email" id="email"> <br>
+		  
+			  <label for= "msg">Leave A Message </label>
+			  <textarea placeholder="Enter Your Message" name = "message" id="msg"></textarea><br>
+		  
+		  
+			  <input type="submit" value = "Submit Your Info"></input>    
 			</div>
+		  </fieldset>
 		  </form>
 	</main>
 
