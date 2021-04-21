@@ -347,7 +347,9 @@ p, h1, h2 {
 	top: 50%;
 	left: 40%;
   }
-  
+.saek {
+	color: black;
+}
   .flip-card-inner {
 	position: relative;
 	width: 100%;
